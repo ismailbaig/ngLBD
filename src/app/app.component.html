@@ -2,13 +2,25 @@
 <div class="container">
   <form>
     <div class="form-group">
+        <div class="row">
         <label for="locId">Pick up location:</label>
-        <div >
         <select class="form-control" id="locId">
           <option *ngFor="let loc of allPickUpLocations">
             {{loc.area}}, {{loc.state}} </option>
         </select>
-      </div>
+        <br/>
+        <label for="locId">Delivery location:</label>
+        <select class="form-control" id="locId">
+          <option *ngFor="let loc of allPickUpLocations">
+            {{loc.area}}, {{loc.state}} </option>
+        </select>
+        </div> 
+        <br />
+        <div class="row btn-toolbar">
+            <button class="btn btn-primary pull-right">Submit Order</button>
+          <button class="btn btn-danger pull-right">Cancel Order</button>
+          
+        </div>
       </div>
     </form>
   </div>
