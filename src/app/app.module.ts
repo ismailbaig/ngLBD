@@ -21,7 +21,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     BrowserModule, RouterModule.forRoot([
       {path:"", component: HeaderComponent},
       {path:"about", component:AboutComponent},
-      {path:"about", component:ContactComponent},
+      {path:"contact", component:ContactComponent},
       // {path:"manage", component: ManageComponent, canActivate: [LoginGuard]},
       // {path:"login", component: LoginComponent},
       // {path:"logout", component: LogoutComponent},
