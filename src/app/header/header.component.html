@@ -1,6 +1,6 @@
 <nav class='navbar navbar-default'>
-    <a href="#" class="navbar-brand"> {{cmpHeading}} vvvv</a>
-    
+    <a href="#" class="navbar-brand"> {{cmpHeading}} : {{name}}</a>
+   
     <ul class="nav navbar-nav">
       <li><a routerLink="">Home</a> </li>
       <li><a routerLink="/about">About1</a></li>
@@ -15,9 +15,9 @@
   <ul class="nav navbar-nav">
     <li><a routerLink="/">Home</a> </li>
     <li><a routerLink="/list">Shopping list</a></li>
-    <li *ngIf="isUserLoggedIn()"><a routerLink="/manage">Manage Products</a></li>
+    <!-- <li *ngIf="isUserLoggedIn()"><a routerLink="/manage">Manage Products</a></li>
     <li *ngIf="!isUserLoggedIn()"><a routerLink="/login">Login</a></li>
-    <li *ngIf="isUserLoggedIn()"><a routerLink="/logout" (click)="doLogout()">Logout</a></li>
+    <li *ngIf="isUserLoggedIn()"><a routerLink="/logout" (click)="doLogout()">Logout</a></li> -->
   </ul>
   
 </nav>

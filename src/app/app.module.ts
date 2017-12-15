@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { orderService } from './services/order.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
       {path:"**", component: NotfoundComponent}
     ], {useHash: true}) //useHash makes sure that each url request doesnot go to the server
   ],
-  providers: [],
+  providers: [orderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
