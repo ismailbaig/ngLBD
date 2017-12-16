@@ -28,13 +28,13 @@
         <div class="row">
         <label for="locId">Pick up location:</label>
         <select class="form-control" id="locId">
-          <option *ngFor="let loc of allPickUpLocations">
+          <option *ngFor="let loc of allPicDropLocs">
             {{loc.pickupLoc}} </option>
         </select>
         <br/>
         <label for="locId">Delivery location:</label>
         <select class="form-control" id="locId">
-          <option *ngFor="let loc of allPickUpLocations">
+          <option *ngFor="let loc of allPicDropLocs">
             {{loc.dropLoc}} </option>
         </select>
         </div> 

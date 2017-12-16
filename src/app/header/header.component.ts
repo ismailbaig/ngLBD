@@ -25,10 +25,10 @@ export class HeaderComponent implements OnInit {
 
   title = 'app';
   placeToPickLunchBox : string = "No Place selected to pickup lunchbox";
-  allPickUpLocations : any[];
+  allPicDropLocs : any[];
 
   constructor(private ordSvc: orderService){
-    this.allPickUpLocations = ordSvc.getOrderDetails();
+    this.allPicDropLocs = ordSvc.getOrderDetails();
   }
 
   ngOnInit() {

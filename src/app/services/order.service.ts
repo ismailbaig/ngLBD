@@ -10,8 +10,10 @@ export class orderService{
     }
 
     getOrderDetails(){
-        this.ordDets = [new orderDetailModel ('BTM', 'Bangalore'),
-        new orderDetailModel ('Bellandur', 'Devarabeesanahalli'),
+        this.ordDets = [
+            new orderDetailModel ('BTM', 'Bangalore'),
+            new orderDetailModel ('Bellandur', 'Devarabeesanahalli'),
+            new orderDetailModel ('Maruti Nager', 'Marthalli')
     ]
         return this.ordDets;
     }
