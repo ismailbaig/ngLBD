@@ -10,6 +10,9 @@ export class orderService{
     }
 
     getOrderDetails(){
-        return 'ismail';
+        this.ordDets = [new orderDetailModel ('BTM', 'Bangalore'),
+        new orderDetailModel ('Bellandur', 'Devarabeesanahalli'),
+    ]
+        return this.ordDets;
     }
 }

@@ -21,18 +21,14 @@ import { orderService } from '../services/order.service';
 export class HeaderComponent implements OnInit {
 
   cmpHeading: string = "Lunch Box Delivery";
-  name: string = '';
+  name: string = 'None';
 
   title = 'app';
   placeToPickLunchBox : string = "No Place selected to pickup lunchbox";
   allPickUpLocations : any[];
 
   constructor(private ordSvc: orderService){
-    this.name = ordSvc.getOrderDetails();
-    this.allPickUpLocations = [
-      { area: 'BTM', state: 'Bangalore', pincode: '123' },
-      { area: 'BTM stage 2', state: 'Bangalore', pincode: '124' }
-    ];
+    this.allPickUpLocations = ordSvc.getOrderDetails();
   }
 
   ngOnInit() {
