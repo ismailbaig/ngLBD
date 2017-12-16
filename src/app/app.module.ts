@@ -23,6 +23,7 @@ import { orderService } from './services/order.service';
       {path:"", component: HeaderComponent},
       {path:"about", component:AboutComponent},
       {path:"contact", component:ContactComponent},
+      {path:"orderdetls", component:ContactComponent},
       // {path:"manage", component: ManageComponent, canActivate: [LoginGuard]},
       // {path:"login", component: LoginComponent},
       // {path:"logout", component: LogoutComponent},

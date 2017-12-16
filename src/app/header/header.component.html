@@ -8,20 +8,6 @@
     </ul>
 </nav> -->
 
-<nav class="navbar navbar-inverse">
-  <div class="navbar-header">
-    <a href="#" class="navbar-brand">{{cmpHeading}}</a>
-  </div>
-  <ul class="nav navbar-nav">
-    <li><a routerLink="/">Home</a> </li>
-    <li><a routerLink="/about">About</a></li>
-    <!-- <li *ngIf="isUserLoggedIn()"><a routerLink="/manage">Manage Products</a></li>
-    <li *ngIf="!isUserLoggedIn()"><a routerLink="/login">Login</a></li>
-    <li *ngIf="isUserLoggedIn()"><a routerLink="/logout" (click)="doLogout()">Logout</a></li> -->
-  </ul>
-  
-</nav>
-
 <div class="container">
   <form>
     <div class="form-group">
@@ -40,7 +26,8 @@
         </div> 
         <br />
         <div class="row btn-toolbar">
-          <button class="btn btn-primary pull-right">Submit Order</button>
+          <button class="btn btn-primary pull-right"
+          (click)="submitOrder()">Submit Order</button>
           <button class="btn btn-danger pull-right">Cancel Order</button>
         </div>
       </div>
