@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { orderService } from '../services/order.service';
 
 @Component({
   selector: 'app-about',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
+ 
+  AboutName:string ="Towseef";
+  
+ 
+ constructor(private ordersvc:orderService) { 
+   this.AboutName = ordersvc.getAboutDetails();
+ }
 
   ngOnInit() {
   }

@@ -16,5 +16,9 @@ export class orderService{
             new orderDetailModel ('Maruti Nager', 'Marthalli')
     ]
         return this.ordDets;
+    }  
+    
+    getAboutDetails(){
+        return "I am data from order service";
     }
 }
