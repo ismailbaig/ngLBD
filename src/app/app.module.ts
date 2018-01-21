@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from "@angular/router";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component'; // using in C# 
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -11,7 +11,7 @@ import { orderService } from './services/order.service';
 
 
 @NgModule({
-  declarations: [
+  declarations: [ // Registration of components
     AppComponent,
     HeaderComponent,
     AboutComponent,
@@ -20,7 +20,7 @@ import { orderService } from './services/order.service';
   ],
   imports: [
     BrowserModule, RouterModule.forRoot([
-      {path:"", component: HeaderComponent},
+      {path:"", component: HeaderComponent}, // Routing
       {path:"about", component:AboutComponent},
       {path:"contact", component:ContactComponent},
       {path:"orderdetls", component:ContactComponent},
@@ -31,7 +31,7 @@ import { orderService } from './services/order.service';
       {path:"**", component: NotfoundComponent}
     ], {useHash: true}) //useHash makes sure that each url request doesnot go to the server
   ],
-  providers: [orderService],
-  bootstrap: [AppComponent]
+  providers: [orderService], // Registration of services
+  bootstrap: [AppComponent] // Startup component
 })
 export class AppModule { }
