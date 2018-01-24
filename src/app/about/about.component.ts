@@ -9,10 +9,13 @@ import { orderService } from '../services/order.service';
 export class AboutComponent implements OnInit {
  
   AboutName:string ="Towseef";
-  
+  msg:string ="Error";
  
  constructor(private ordersvc:orderService) { 
-   this.AboutName = ordersvc.getAboutDetails();
+  // this.AboutName = ordersvc.getAboutDetails();
+  this.ordersvc.get('http://localhost:3000/api/home/')
+            .subscribe(users => {console.log(users) },
+            error => this.msg = <any>error);
  }
 
   ngOnInit() {
