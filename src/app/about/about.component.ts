@@ -16,6 +16,8 @@ export class AboutComponent implements OnInit {
  }
 
   ngOnInit() {
+    var x = this.ordersvc.getUsersFromWebAPI();
+    console.log(x);
   }
 
 }

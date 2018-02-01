@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { orderService } from './services/order.service';
+import {HttpModule} from '@angular/http';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { orderService } from './services/order.service';
     NotfoundComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot([
+    BrowserModule, HttpModule,
+    
+    RouterModule.forRoot([
       {path:"", component: HeaderComponent}, // Routing
       {path:"about", component:AboutComponent},
       {path:"contact", component:ContactComponent},
