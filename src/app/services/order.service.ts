@@ -32,7 +32,12 @@ export class orderService{
     
     getAboutDetails() : Observable<any>{
        // return "I am data from order service";
-       return this.http.get('http://localhost:3000/api/home/');
+       //return this.http.get('http://localhost:3000/api/home/');
+
+       return this.http.get('http://localhost:3000/api/home/')
+                .map((resp) => {
+                    return resp.json()
+                });
        
     }
 

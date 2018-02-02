@@ -11,6 +11,7 @@ export class AboutComponent implements OnInit {
   AboutName:string ="Towseef";
   msg:string ="Error";
   objPosts: Object;
+  dataFromOurWebAPI : string = '';
  
  constructor(private ordersvc:orderService) { 
   // this.AboutName = ordersvc.getAboutDetails();
@@ -25,7 +26,14 @@ export class AboutComponent implements OnInit {
               .subscribe(
                 (responseData) => this.objPosts = responseData,
                 (error) => console.log(error));
-    console.log(x);
+    
+    //            console.log(x);
+
+        this.ordersvc.getAboutDetails()
+                .subscribe(
+                  (resp) => this.dataFromOurWebAPI = resp,
+                  (error) => console.log(error)
+                );
   }
 
 }
