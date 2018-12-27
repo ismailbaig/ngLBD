@@ -9,6 +9,9 @@ import { ContactComponent } from './contact/contact.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { orderService } from './services/order.service';
 import {HttpModule} from '@angular/http';
+import {StoreModule} from '@ngrx/store';
+import { simpleReducer } from '../simple.reducer';
+
 
 
 @NgModule({
@@ -21,6 +24,7 @@ import {HttpModule} from '@angular/http';
   ],
   imports: [
     BrowserModule, HttpModule,
+    StoreModule.forRoot({ message: simpleReducer}),
     
     RouterModule.forRoot([
       {path:"", component: HeaderComponent}, // Routing

@@ -12,8 +12,10 @@
   <form>
     <div class="form-group">
         <div class="row">
+        
+        
         <label for="locId">Pick up location:</label>
-        <select class="form-control" id="locId">
+        <select class="form-control" id="locId" required>
           <option *ngFor="let loc of allPicDropLocs">
             {{loc.pickupLoc}} </option>
         </select>
@@ -23,12 +25,51 @@
           <option *ngFor="let loc of allPicDropLocs">
             {{loc.dropLoc}} </option>
         </select>
+
+        <br />
+        <input type="color" />
+
+        <br />
+        <input type="date" />
+        
+        <br />
+        <input type="datetime" />
+
+        <br />
+        <input type="week" />
+
+        <br />
+        <input type="time" />
+
+        <br />
+        <input type="month" />
+
+        <br />
+        <input type="range" min="0" max="10" step="2" value="4" />
+
+        <br />
+        <label>Place Holder: </label>
+        <input type="text"  placeholder="Enter Place here!" required/>
+      
+        <br />
+        <label for="txtUrl">Url</label>
+        <input id="txtUrl" type="url" />
+        
+        <br />
+        <label for="txtEmail">Email:</label>
+        <input id="txtEmail" type="email" />
+
+        <br />
+        <input type="number" min="0" max="10" step="2" value="4" />
+
+
         </div> 
         <br />
         <div class="row btn-toolbar">
           <button class="btn btn-primary pull-right"
           (click)="submitOrder()">Submit Order</button>
           <button class="btn btn-danger pull-right">Cancel Order</button>
+          <input type="submit" value="Place Order" />
         </div>
       </div>
     </form>

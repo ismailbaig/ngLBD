@@ -13,5 +13,8 @@
     </ul>
     
   </nav>
+  <div>Message : {{message$ | async}} </div>
+  <button (click)='frenchMessage()'>French</button>
+  <button (click)='spanishMessage()'>spanish</button>
 <router-outlet></router-outlet>
 
