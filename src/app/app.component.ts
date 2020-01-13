@@ -21,7 +21,7 @@ export class AppComponent {
   }
 
   frenchMessage(){
-    this.store.dispatch({type: 'FRENCH'}); //payload
+    this.store.dispatch({type: 'FRENCH'}); //type and payload
   } 
 
   spanishMessage(){
