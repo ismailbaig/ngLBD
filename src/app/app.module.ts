@@ -10,6 +10,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { orderService } from './services/order.service';
 import {HttpModule} from '@angular/http';
 import {StoreModule} from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { simpleReducer } from '../simple.reducer';
 
 
@@ -25,6 +26,9 @@ import { simpleReducer } from '../simple.reducer';
   imports: [
     BrowserModule, HttpModule,
     StoreModule.forRoot({ message: simpleReducer}),
+    // StoreDevtoolsModule.instrument({
+    //   maxAge: 25
+    // }),
     
     RouterModule.forRoot([
       {path:"", component: HeaderComponent}, // Routing
